@@ -8,6 +8,7 @@ def main_menu():
     while True:
         print('Ingrese "si" para salir del calculador ')
         print('Ingrese "historial" para ver las operaciones realizadas ')
+        print('Ingrese "exportar" para generar un txt con el historial')
         print('Cualquier otro input iniciara un nuevo calculo ')
 
         exit = input(': ')
@@ -16,6 +17,9 @@ def main_menu():
             break
         elif exit == 'historial':
             calculadora.mostrar_historial()
+            continue
+        elif exit == 'exportar':
+            calculadora.exportar_historial()
             continue
 
         num1, num2 = calculadora.leer_enteros()

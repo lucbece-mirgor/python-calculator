@@ -91,3 +91,9 @@ class Calculator:
             self._guardar_historial(self.num1, self.num2, operator, result)
         finally:
             self.mostrar_resultado(result)
+
+    def exportar_historial(self):
+        # Escribir las operaciones almacenadas en un archivo txt
+        with open('cuentas_realizadas.txt', 'w') as file:
+            for calculo in self.historial:
+                file.write(f'{calculo} \n')
