@@ -1,5 +1,4 @@
-class DivisionByZeroError(Exception):
-    pass
+from exceptions import DivisionByZeroError
 
 
 class Calculator:
