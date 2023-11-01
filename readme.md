@@ -34,7 +34,7 @@ Tener instalado Python 3. Se recomienda la version 3.8.10 en adelante, siendo es
 ### Installation
 
 - Clonar el repositorio
-- Ejecutar la rutina principal (main.py) mediante el comando ```bash python3 main.py ```
+- Ejecutar la rutina principal (main.py) mediante el comando ```python3 main.py```
 
 ## Usage
 
