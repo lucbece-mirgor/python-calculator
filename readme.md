@@ -34,8 +34,9 @@ Tener instalado Python 3. Se recomienda la version 3.8.10 en adelante, siendo es
 ### Installation
 
 - Clonar el repositorio
-- Ejecutar la rutina principal (main.py) mediante el comando ```python3 main.py```
+- Abrir una terminal y pararse dentro del directorio donde fue clonado el proyecto
 
 ## Usage
+Ejecutar la rutina principal (main.py) mediante el comando ```python3 main.py```.
 
 La ejecución comienza pidiéndole al usuario que ingrese dos numeros enteros. A raiz de esto se determina la operacion a realizar, y al finalizar el usuario puede optar por realizar nuevas operaciones, ver el historial de operaciones realizadas, exportar el historial en un archivo txt o salir del programa
