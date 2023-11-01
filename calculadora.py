@@ -1,6 +1,7 @@
 class DivisionByZeroError(Exception):
     pass
 
+
 class Calculator:
     def __init__(self):
         self.num1, self.num2 = self.leer_enteros()
@@ -10,11 +11,14 @@ class Calculator:
         # Lee y retorna dos numeros enteros
         while True:
             try:
-                num1, num2 = map(int, input("Ingrese dos numeros enteros separados por coma: ").split(','))
+                num1, num2 = map(
+                    int,
+                    input("Ingrese dos numeros enteros separados por coma: ")
+                    .split(','))
                 return num1, num2
             except ValueError:
-                print('Los numeros ingresados deben ser enteros. Intentelo nuevamente')
-    
+                print('Los numeros ingresados deben ser enteros.')
+
     def setear_enteros(self, num1, num2):
         # Setea los enteros num1 y num2 como atributos de la clase
         self.num1, self.num2 = num1, num2
@@ -26,23 +30,25 @@ class Calculator:
             if operator in ('+', '-', '*', '/'):
                 return operator
             else:
-                print(f'El operador {operator} no es valido. Intente nuevamente')
+                print(f'El operador {operator} no es valido.')
 
     def _guardar_historial(self, num1, num2, operator, result):
         # Guarda el resultado de una operacion en el atributo historial
-        operators_string = {
+        operators = {
             '+': 'suma',
             '-': 'resta',
             '*': 'multiplicacion',
             '/': 'division'
         }
-        operacion_string = f'La {operators_string[operator]} entre {num1} y {num2} es {result}'
+        operacion_string = (
+            f'La {operators[operator]} entre {num1} y {num2} es {result}'
+        )
         self.historial.append(operacion_string)
 
     def _sumar(self):
         # Suma y retorna dos numeros enteros
         return self.num1 + self.num2
-    
+
     def _restar(self):
         # Resta y retorna dos numeros enteros
         return self.num1 - self.num2
@@ -67,7 +73,8 @@ class Calculator:
             print(f'{historia} \n')
 
     def realizar_operacion(self):
-        # Dados dos numeros enteros y un operador, realiza la operacion, la guarda en el historial y la muestra en pantalla
+        # Dados dos numeros enteros y un operador, realiza la operacion,
+        # la guarda en el historial y la muestra en pantalla
         operators = {
             '+': self._sumar,
             '-': self._restar,
@@ -84,7 +91,3 @@ class Calculator:
             self._guardar_historial(self.num1, self.num2, operator, result)
         finally:
             self.mostrar_resultado(result)
-        
-
-
-

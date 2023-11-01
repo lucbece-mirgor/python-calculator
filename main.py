@@ -1,14 +1,15 @@
 from calculadora import Calculator
 
+
 def main_menu():
     calculadora = Calculator()
     calculadora.realizar_operacion()
 
     while True:
         print('Ingrese "si" para salir del calculador ')
-        print('Ingrese "historial" para visualizar las operaciones realizadas ')
+        print('Ingrese "historial" para ver las operaciones realizadas ')
         print('Cualquier otro input iniciara un nuevo calculo ')
-        
+
         exit = input(': ')
 
         if exit == 'si':
@@ -21,5 +22,6 @@ def main_menu():
         calculadora.setear_enteros(num1, num2)
         calculadora.realizar_operacion()
     return
+
 
 main_menu()
