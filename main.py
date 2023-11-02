@@ -6,6 +6,7 @@ def main_menu():
     calculadora.realizar_operacion()
 
     while True:
+        print('\n')
         print('Ingrese "si" para salir del calculador ')
         print('Ingrese "historial" para ver las operaciones realizadas ')
         print('Ingrese "exportar" para generar un txt con el historial')
@@ -16,6 +17,7 @@ def main_menu():
         if exit == 'si':
             break
         elif exit == 'historial':
+            print('\n')
             calculadora.mostrar_historial()
             continue
         elif exit == 'exportar':
